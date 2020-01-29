@@ -22,3 +22,8 @@ To Clone
 1. Ctrl+Shift+P to show the Command Palette.
 2. Execute the Git: Clone command. 
 3. Paste in the URL to your repo and press Enter. - https://github.com/shaijukumar/ReactSample
+
+
+Class component => rce 
+Functional component  => rfce  
+Constructor => rconst 

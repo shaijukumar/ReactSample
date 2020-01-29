@@ -6,11 +6,21 @@ import Welcome from './components/Welcome'
 import Message from './components/Message'
 import Counter from './components/Counter'
 import FunctionClick from './components/FunctionClick'
+import ParentComponent from './components/ParentComponent'
+import UserGreetings from './components/UserGreetings'
+import NameList from './components/NameList'
+import Stylesheet from './components/Stylesheet'
+import Inline from './components/Inline'
+import Form from './components/Form'
+//import NameList from './components/NameList'
+//import NameList from './components/NameList'
+//import NameList from './components/NameList'
+//import NameList from './components/NameList'
 
 function App() {
   return (
     <div className="App">
-
+      {/* 
       <Counter />
       <Greet name="Tom" age="30">children</Greet>
       <Greet name="Jack" age="20">
@@ -21,6 +31,21 @@ function App() {
       <Message />
 
       <FunctionClick></FunctionClick>
+
+      <ParentComponent></ParentComponent>
+
+      <UserGreetings></UserGreetings>
+
+       <NameList></NameList>
+
+       <Stylesheet primary={true}></Stylesheet>
+       <Inline></Inline>
+*/}
+
+
+
+      <Form></Form>
+
 
     </div>
 

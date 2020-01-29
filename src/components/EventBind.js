@@ -5,6 +5,15 @@ class EventBind extends Component {
         return (
             <div>
 
+
+
+                <div>
+                    <button onClick={clickHandler} >Click</button>
+                </div>
+
+                <div>
+                    <button onClick={clickHandler} >Click 1</button>
+                </div>
             </div>
         )
     }
