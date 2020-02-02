@@ -4,10 +4,20 @@ export class Form extends Component {
 
     constructor(props) {
         super(props)
+        this.InputRef = React.createRef()
 
         this.state = {
-            userName: ''
+            userName: '',
+            comments: '',
+            topic: 'react'
         }
+
+        this.InputRef = React.createRef()
+    }
+
+    componentDidMount() {
+        this.InputRef.current.focus();
+
     }
 
     handelUserNameChange = (event) => {
@@ -17,14 +27,43 @@ export class Form extends Component {
         })
     }
 
+    handleCommentsChange = event => {
+        this.setState({
+            comments: event.target.value
+        })
+    }
+
+
+    handleSubmit = event => {
+        alert(`User name: ${this.state.userName},  ${this.state.comments} `)
+        event.preventDefault()
+    }
+
     render() {
+        const { userName, comments, topic } = this.state
         return (
-            <form>
+            < form onSubmit={this.handleSubmit} >
                 <div>
                     <label>Username </label>
-                    <input type='text' value={this.state.userName} onChange={this.handelUserNameChange} />
+                    <input
+                        ref={this.InputRef}
+                        type='text'
+                        value={userName}
+                        onChange={this.handelUserNameChange}
+                    />
                 </div>
-            </form>
+
+                <div>
+                    <label>Comments</label>
+                    <textarea
+                        value={comments}
+                        onChange={this.handleCommentsChange}
+                    />
+                </div>
+
+                <button type="submit">Submit</button>
+
+            </form >
         )
     }
 }
